@@ -1,5 +1,5 @@
-<h1 align="center">Hi there, I'm Sangram Borude 👋</h1>
-<h3 align="center">A passionate developer building amazing Web Applications</h3>
+<h1 align="center">🐮 Sangram Borude 🐮</h1>
+<h3 align="center">I Use GitHub for TimePass 💦</h3>
 
 <br />
 
