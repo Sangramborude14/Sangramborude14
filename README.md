@@ -35,7 +35,7 @@
 
 ### 🏆 Hackathons
 
-I actively participate in hackathons to build innovative solutions, collaborate with peers, and challenge myself:
+i like to attend hackathons:
 
 - 🏅 **Hack on Hill 7.0**
 - 🏅 **Rekkathon**
