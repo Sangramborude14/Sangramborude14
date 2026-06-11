@@ -270,7 +270,7 @@
             </div>
 
             <div style="display: flex; gap: 1.5rem; align-items: center;">
-              <a href="https://leetcode.com/Sangramborude14" target="_blank" class="btn-primary">
+              <a href="https://leetcode.com/sangramisnoob" target="_blank" class="btn-primary">
                 <i data-lucide="terminal"></i> LeetCode Profile
               </a>
               <span id="acceptance-rate" style="font-family: var(--font-header); font-weight: 700; color: hsl(var(--color-astro-grey));">
@@ -351,6 +351,53 @@
       </div>
     </section>
 
+    <!-- PLAYSTATION CONTROLLER PLAYGROUND -->
+    <section id="controller-playground">
+      <div class="container">
+        <div class="section-header">
+          <h2>Controller Playground</h2>
+          <p>Establish a telemetry uplink. Click buttons on the DualSense controller to trigger retro sound effects and visual game hacks! 🎮</p>
+        </div>
+
+        <div class="astro-card controller-wrapper">
+          <div class="controller-status">
+            <span class="status-indicator-dot active"></span>
+            <span>DUALSENSE UPLINK: ACTIVE</span>
+          </div>
+
+          <!-- DualSense Controller Chassis -->
+          <div class="dualsense-controller">
+            <!-- Left Grip Area (D-PAD) -->
+            <div class="dpad">
+              <button class="dpad-btn up" onclick="triggerDpad('up')" title="Move Astro Up"><i data-lucide="chevron-up"></i></button>
+              <button class="dpad-btn down" onclick="triggerDpad('down')" title="Move Astro Down"><i data-lucide="chevron-down"></i></button>
+              <button class="dpad-btn left" onclick="triggerDpad('left')" title="Move Astro Left"><i data-lucide="chevron-left"></i></button>
+              <button class="dpad-btn right" onclick="triggerDpad('right')" title="Move Astro Right"><i data-lucide="chevron-right"></i></button>
+            </div>
+
+            <!-- Central Touchpad -->
+            <div class="touchpad" onclick="triggerTouchpad()">
+              <div class="touchpad-bar"></div>
+              <span>TOUCHPAD</span>
+            </div>
+
+            <!-- Right Grip Area (Action Buttons) -->
+            <div class="actions">
+              <button class="action-btn triangle" onclick="triggerAction('triangle')" title="Change Theme Palette">🔺</button>
+              <button class="action-btn circle" onclick="triggerAction('circle')" title="Astro Spin Attack">🟡</button>
+              <button class="action-btn cross" onclick="triggerAction('cross')" title="Astro Hover Thruster">❌</button>
+              <button class="action-btn square" onclick="triggerAction('square')" title="Spawn Coins">🟦</button>
+            </div>
+
+            <!-- Audio Notification -->
+            <div class="controller-audio-tip">
+              <i data-lucide="volume-2"></i> Sound Synth Engine Ready
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- Footer -->
@@ -360,7 +407,7 @@
         <a href="https://github.com/Sangramborude14" target="_blank" class="social-icon">
           <i data-lucide="github"></i>
         </a>
-        <a href="https://leetcode.com/Sangramborude14" target="_blank" class="social-icon">
+        <a href="https://leetcode.com/sangramisnoob" target="_blank" class="social-icon">
           <i data-lucide="award"></i>
         </a>
         <a href="mailto:sangramborude14@gmail.com" class="social-icon">

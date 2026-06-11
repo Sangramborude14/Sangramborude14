@@ -92,13 +92,13 @@ function renderSkills(filter) {
 }
 
 // --- 3. DYNAMIC LEETCODE STATS INTEGRATION ---
-const LEETCODE_USERNAME = 'Sangramborude14';
+const LEETCODE_USERNAME = 'sangramisnoob';
 const FALLBACK_STATS = {
-  totalSolved: 342,
-  easySolved: 124,
-  mediumSolved: 182,
-  hardSolved: 36,
-  acceptanceRate: 58.7
+  totalSolved: 358,
+  easySolved: 142,
+  mediumSolved: 184,
+  hardSolved: 32,
+  acceptanceRate: 62.4
 };
 
 async function fetchLeetCodeStats() {
@@ -342,7 +342,240 @@ function initScrollSpy() {
   });
 }
 
-// --- 8. SYSTEM BOOTSTRAP ---
+// --- 8. SYSTEM CONTROLLER PLAYGROUND & AUDIO SYNTH ---
+let audioCtx = null;
+
+function initAudio() {
+  if (!audioCtx) {
+    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  }
+}
+
+// Retro PlayStation Synth Sound Effects Generator (Web Audio API)
+function playControllerSound(type) {
+  try {
+    initAudio();
+    if (audioCtx.state === 'suspended') {
+      audioCtx.resume();
+    }
+
+    const osc = audioCtx.createOscillator();
+    const gainNode = audioCtx.createGain();
+    osc.connect(gainNode);
+    gainNode.connect(audioCtx.destination);
+
+    const now = audioCtx.currentTime;
+
+    if (type === 'click') {
+      // Short mechanical click sound (D-pad)
+      osc.type = 'triangle';
+      osc.frequency.setValueAtTime(150, now);
+      osc.frequency.exponentialRampToValueAtTime(300, now + 0.05);
+      gainNode.gain.setValueAtTime(0.15, now);
+      gainNode.gain.exponentialRampToValueAtTime(0.01, now + 0.05);
+      osc.start(now);
+      osc.stop(now + 0.05);
+    } 
+    else if (type === 'laser') {
+      // Future laser sweep (Triangle button)
+      osc.type = 'sawtooth';
+      osc.frequency.setValueAtTime(880, now);
+      osc.frequency.exponentialRampToValueAtTime(110, now + 0.25);
+      gainNode.gain.setValueAtTime(0.1, now);
+      gainNode.gain.exponentialRampToValueAtTime(0.01, now + 0.25);
+      osc.start(now);
+      osc.stop(now + 0.25);
+    } 
+    else if (type === 'spin') {
+      // High-speed vibrato sweep (Circle button)
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(300, now);
+      osc.frequency.linearRampToValueAtTime(900, now + 0.30);
+      
+      // Vibrato frequency modulation
+      const mod = audioCtx.createOscillator();
+      const modGain = audioCtx.createGain();
+      mod.frequency.value = 35; // 35Hz modulation speed
+      modGain.gain.value = 150; // vibrato range
+      mod.connect(modGain);
+      modGain.connect(osc.frequency);
+      
+      gainNode.gain.setValueAtTime(0.12, now);
+      gainNode.gain.exponentialRampToValueAtTime(0.01, now + 0.30);
+      
+      mod.start(now);
+      osc.start(now);
+      mod.stop(now + 0.30);
+      osc.stop(now + 0.30);
+    } 
+    else if (type === 'jump') {
+      // Pitch slide sweep from low to high (Cross button)
+      osc.type = 'triangle';
+      osc.frequency.setValueAtTime(220, now);
+      osc.frequency.exponentialRampToValueAtTime(880, now + 0.2);
+      gainNode.gain.setValueAtTime(0.15, now);
+      gainNode.gain.exponentialRampToValueAtTime(0.01, now + 0.2);
+      osc.start(now);
+      osc.stop(now + 0.2);
+    } 
+    else if (type === 'coin') {
+      // Retro chime (Square button)
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(987.77, now); // B5 note
+      osc.frequency.setValueAtTime(1318.51, now + 0.08); // E6 note
+      gainNode.gain.setValueAtTime(0.1, now);
+      gainNode.gain.setValueAtTime(0.1, now + 0.08);
+      gainNode.gain.exponentialRampToValueAtTime(0.01, now + 0.25);
+      osc.start(now);
+      osc.stop(now + 0.25);
+    }
+  } catch (err) {
+    console.error("Audio Context initialization blocked/failed: ", err);
+  }
+}
+
+// Controller Actions Interaction Logic
+const PALETTES = [
+  { name: 'cyan', blue: '197 100% 51%', darkBlue: '216 100% 45%' },
+  { name: 'pink', blue: '290 80% 60%', darkBlue: '320 80% 50%' },
+  { name: 'green', blue: '145 80% 50%', darkBlue: '160 80% 40%' },
+  { name: 'gold', blue: '45 100% 50%', darkBlue: '35 100% 45%' }
+];
+let currentPaletteIdx = 0;
+let botOffset = { x: 0, y: 0 };
+let currentEyeColorIdx = 0;
+const EYE_COLORS = ['#00bfff', '#ff4757', '#2ed573', '#eccc68'];
+
+function triggerAction(action) {
+  const avatar = document.querySelector('.astro-bot-avatar');
+
+  if (action === 'triangle') {
+    // 🔺 Triangle: Cycle theme colors
+    playControllerSound('laser');
+    currentPaletteIdx = (currentPaletteIdx + 1) % PALETTES.length;
+    const palette = PALETTES[currentPaletteIdx];
+    document.documentElement.style.setProperty('--color-astro-blue', palette.blue);
+    document.documentElement.style.setProperty('--color-astro-dark-blue', palette.darkBlue);
+    console.log(`System theme toggled to: ${palette.name.toUpperCase()}`);
+  } 
+  else if (action === 'circle') {
+    // 🟡 Circle: Spin Attack
+    playControllerSound('spin');
+    if (avatar) {
+      avatar.animate([
+        { transform: `translate(${botOffset.x}px, ${botOffset.y}px) rotate(0deg)` },
+        { transform: `translate(${botOffset.x}px, ${botOffset.y}px) rotate(360deg)` }
+      ], {
+        duration: 500,
+        easing: 'ease-out'
+      });
+    }
+  } 
+  else if (action === 'cross') {
+    // ❌ Cross: Hover Thruster Jump
+    playControllerSound('jump');
+    if (avatar) {
+      // Bouncy jump animation
+      avatar.animate([
+        { transform: `translate(${botOffset.x}px, ${botOffset.y}px) scaleY(0.9)` },
+        { transform: `translate(${botOffset.x}px, ${botOffset.y - 80}px) scaleY(1.05)` },
+        { transform: `translate(${botOffset.x}px, ${botOffset.y}px) scaleY(1)` }
+      ], {
+        duration: 500,
+        easing: 'cubic-bezier(0.25, 0.8, 0.25, 1)'
+      });
+
+      // Emit huge spark particles at avatar's position!
+      const rect = avatar.getBoundingClientRect();
+      const originX = rect.left + rect.width / 2;
+      const originY = rect.top + rect.height;
+      for (let i = 0; i < 30; i++) {
+        sparks.push({
+          x: originX + (Math.random() - 0.5) * 40,
+          y: originY + (Math.random() - 0.5) * 10,
+          vx: (Math.random() - 0.5) * 6,
+          vy: Math.random() * 5 + 3, // down thruster flame
+          life: 1.0,
+          decay: Math.random() * 0.05 + 0.03,
+          size: Math.random() * 4 + 2
+        });
+      }
+    }
+  } 
+  else if (action === 'square') {
+    // 🟦 Square: Spawn Star Coins
+    playControllerSound('coin');
+    for (let i = 0; i < 6; i++) {
+      spawnStarCoin();
+    }
+  }
+}
+
+function triggerDpad(direction) {
+  playControllerSound('click');
+  const avatar = document.querySelector('.astro-bot-avatar');
+  if (!avatar) return;
+
+  const moveStep = 30;
+  if (direction === 'up') botOffset.y -= moveStep;
+  else if (direction === 'down') botOffset.y += moveStep;
+  else if (direction === 'left') botOffset.x -= moveStep;
+  else if (direction === 'right') botOffset.x += moveStep;
+
+  // Keep it constrained
+  botOffset.x = Math.max(-200, Math.min(200, botOffset.x));
+  botOffset.y = Math.max(-150, Math.min(150, botOffset.y));
+
+  avatar.style.transform = `translate(${botOffset.x}px, ${botOffset.y}px)`;
+}
+
+function triggerTouchpad() {
+  playControllerSound('click');
+  const eyes = document.querySelectorAll('.astro-bot-eye');
+  const touchpadBar = document.querySelector('.touchpad-bar');
+  
+  currentEyeColorIdx = (currentEyeColorIdx + 1) % EYE_COLORS.length;
+  const color = EYE_COLORS[currentEyeColorIdx];
+
+  eyes.forEach(eye => {
+    eye.style.backgroundColor = color;
+    eye.style.boxShadow = `0 0 15px ${color}, 0 0 30px ${color}`;
+  });
+
+  if (touchpadBar) {
+    touchpadBar.style.backgroundColor = color;
+    touchpadBar.style.boxShadow = `0 0 15px ${color}`;
+  }
+}
+
+function spawnStarCoin() {
+  const coin = document.createElement('div');
+  coin.className = 'astro-star-coin';
+  coin.style.position = 'fixed';
+  coin.style.left = `${Math.random() * 80 + 10}vw`;
+  coin.style.bottom = `-50px`;
+  coin.style.zIndex = '999';
+  coin.style.animation = 'none'; // reset keyframes to manual transition
+  document.body.appendChild(coin);
+
+  const duration = Math.random() * 1500 + 1000;
+  const startLeft = parseFloat(coin.style.left);
+  const drift = (Math.random() - 0.5) * 15;
+
+  coin.animate([
+    { bottom: '-50px', transform: 'rotate(0deg) scale(0.6)', opacity: 1 },
+    { bottom: '105vh', transform: `rotate(${Math.random() * 720}deg) scale(1.1)`, opacity: 0.1 }
+  ], {
+    duration: duration,
+    easing: 'ease-out'
+  });
+
+  setTimeout(() => {
+    coin.remove();
+  }, duration);
+}
+
+// --- 9. SYSTEM BOOTSTRAP ---
 document.addEventListener('DOMContentLoaded', () => {
   initCanvas();
   initSkills();

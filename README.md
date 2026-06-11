@@ -82,12 +82,47 @@ Here are the top 5 high-priority rescue missions completed in the galaxy:
 
 ### LeetCode Stats 😔
 <p align="center">
-  <a href="https://leetcode.com/Sangramborude14" target="_blank">
+  <a href="https://leetcode.com/sangramisnoob" target="_blank">
     <img src="https://leetcard.jacoblin.cool/sangramisnoob?theme=dark&font=Outfit" alt="Sangram's LeetCode Stats" />
   </a>
 </p>
 
 ---
 
+## 🎮 Astro's DualSense Controller Uplinks
+
+Click on a controller button to execute a telemetry shortcut:
+
 <p align="center">
+  <table>
+    <tr>
+      <td align="center"><b>Uplink Button</b></td>
+      <td align="center"><b>System Command</b></td>
+      <td align="center"><b>Hyper-Space Link</b></td>
+    </tr>
+    <tr>
+      <td align="center">🔺 <b>Triangle</b></td>
+      <td align="center">Launch Web Portfolio Space</td>
+      <td align="center"><a href="https://Sangramborude14.github.io" target="_blank"><b>Launch Web App</b></a></td>
+    </tr>
+    <tr>
+      <td align="center">🟡 <b>Circle</b></td>
+      <td align="center">Send Telemetry Signal</td>
+      <td align="center"><a href="mailto:sangramborude14@gmail.com"><b>Send Email</b></a></td>
+    </tr>
+    <tr>
+      <td align="center">❌ <b>Cross</b></td>
+      <td align="center">Access DSA Power Core</td>
+      <td align="center"><a href="https://leetcode.com/sangramisnoob" target="_blank"><b>Open LeetCode</b></a></td>
+    </tr>
+    <tr>
+      <td align="center">🟦 <b>Square</b></td>
+      <td align="center">Inspect GitHub Repos</td>
+      <td align="center"><a href="https://github.com/Sangramborude14?tab=repositories" target="_blank"><b>Open Repositories</b></a></td>
+    </tr>
+  </table>
+</p>
+
+<p align="center">
+  <i>"Remember: A bot never sleeps, it just optimizes!"</i> 🤖✨
 </p>
