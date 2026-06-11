@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sangram Borude - Full-Stack Developer & Systems Programmer Portfolio. Astro Bot Themed Web Space.">
+  <title>Sangram Borude | Bot Mission Control 🚀</title>
+
+  <!-- Google Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- Particle Background Space Canvas -->
+  <canvas id="space-canvas"></canvas>
+
+  <!-- Astro Transmission Toaster -->
+  <div id="contact-toaster" class="toaster">
+    <div class="toaster-icon">i</div>
+    <div class="toaster-body">
+      <h5 style="font-family: var(--font-header); font-weight: 800; font-size: 1rem; color: #fff;">TRANSMISSION SENT!</h5>
+      <p style="font-size: 0.8rem; color: hsl(var(--color-astro-grey)); margin: 0;">Astro received your signal in the Code Galaxy.</p>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header id="main-header">
+    <div class="container nav-wrapper">
+      <a href="#home" class="logo">
+        <div class="logo-eye"></div>
+        SANGRAM<span>.BOT</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#home" class="active" data-section="home">Home</a></li>
+          <li><a href="#inventory" data-section="inventory">Inventory</a></li>
+          <li><a href="#missions" data-section="missions">Missions</a></li>
+          <li><a href="#powerup" data-section="powerup">Power-Ups</a></li>
+          <li><a href="#transmission" data-section="transmission">Transmission</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content Space -->
+  <main>
+
+    <!-- HERO SECTION -->
+    <section id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-subtitle">
+            <i data-lucide="gamepad-2"></i> LEVEL 99 FULL-STACK DEVELOPER
+          </div>
+          <h1 class="hero-title">
+            Hi, I'm <span class="glow-blue-text">Sangram</span>.<br>
+            Let's <span class="gradient-text">Rescue Code</span>.
+          </h1>
+          <p class="hero-desc">
+            An agile systems programmer and web engineer specializing in building high-octane digital architectures. Equipped with a premium suite of database, server, and client-side modules.
+          </p>
+          <div class="hero-buttons">
+            <a href="#missions" class="btn-primary">
+              <i data-lucide="compass"></i> View Missions
+            </a>
+            <a href="#transmission" class="btn-secondary">
+              <i data-lucide="send"></i> Send Signal
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-avatar-container">
+          <div class="astro-star-coin star-1"></div>
+          <div class="astro-star-coin star-2"></div>
+          <div class="astro-bot-avatar">
+            <div class="astro-bot-visor">
+              <div class="astro-bot-eye"></div>
+              <div class="astro-bot-eye"></div>
+            </div>
+            <div class="astro-thruster"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INVENTORY SECTION (SKILLS) -->
+    <section id="inventory">
+      <div class="container">
+        <div class="section-header">
+          <h2>Inventory Grid</h2>
+          <p>Astro's active loadout. Browse full modules and software modules sorted by system layers.</p>
+        </div>
+
+        <div class="inventory-filters">
+          <button class="filter-btn active" data-filter="all">All Modules</button>
+          <button class="filter-btn" data-filter="frontend">Client UI</button>
+          <button class="filter-btn" data-filter="backend">Backend Core</button>
+          <button class="filter-btn" data-filter="systems">Systems & DevOps</button>
+        </div>
+
+        <div class="skills-grid" id="skills-container">
+          <!-- Skills chips will be generated dynamically by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- MISSIONS SECTION (PROJECTS) -->
+    <section id="missions">
+      <div class="container">
+        <div class="section-header">
+          <h2>Rescue Missions</h2>
+          <p>Analyzing critical projects executed in the galaxy. All bots successfully recovered. 🏆</p>
+        </div>
+
+        <div class="projects-summary">
+          <div class="projects-summary-indicator">
+            <span class="projects-summary-dot"></span>
+            <span>BOT RESCUE STAGE: COMPLETE</span>
+          </div>
+          <span>|</span>
+          <span class="glow-gold-text">5 / 5 ARCHITECTURES SECURED</span>
+        </div>
+
+        <div class="projects-grid" id="projects-container">
+          <!-- Projects cards will be written here -->
+          
+          <!-- Project 1: OpticSync -->
+          <div class="astro-card project-card">
+            <span class="project-badge">MISSION #01</span>
+            <h3 class="glow-blue-text">OpticSync</h3>
+            <p>Real-time collaborative developer workspace. Synchronizes visual dashboards, active processes, and project states using highly optimized WebSockets and Prisma schemas.</p>
+            <div class="project-tags">
+              <span class="project-tag">Next.js</span>
+              <span class="project-tag">Prisma</span>
+              <span class="project-tag">WebSockets</span>
+              <span class="project-tag">PostgreSQL</span>
+              <span class="project-tag">Zustand</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Sangramborude14/OpticSync.git" target="_blank" class="project-link">
+                <i data-lucide="github"></i> View Repo <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 2: apna-ai -->
+          <div class="astro-card project-card">
+            <span class="project-badge" style="border-color: hsl(var(--color-astro-purple)); color: hsl(var(--color-astro-purple)); text-shadow: 0 0 5px hsla(var(--color-astro-purple) / 0.4);">MISSION #02</span>
+            <h3 class="glow-blue-text" style="color: #c56cf0; text-shadow: 0 0 10px rgba(197, 108, 240, 0.4);">apna-ai</h3>
+            <p>Intelligent agent coordinator. Implements autonomous prompt refining operations, LLM function triggers, and vector state pipelines in a clean, distributable backend module.</p>
+            <div class="project-tags">
+              <span class="project-tag">Node.js</span>
+              <span class="project-tag">Express</span>
+              <span class="project-tag">OpenAI</span>
+              <span class="project-tag">MongoDB</span>
+              <span class="project-tag">Redis</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Sangramborude14/apna-ai.git" target="_blank" class="project-link" style="color: #c56cf0;">
+                <i data-lucide="github"></i> View Repo <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 3: surge-agent -->
+          <div class="astro-card project-card">
+            <span class="project-badge" style="border-color: hsl(var(--color-astro-gold)); color: hsl(var(--color-astro-gold)); text-shadow: 0 0 5px hsla(var(--color-astro-gold) / 0.4);">MISSION #03</span>
+            <h3 class="glow-gold-text">surge-agent</h3>
+            <p>Ultra-fast developer CLI orchestrator. Synchronizes local workspace changes, coordinates task groups, and launches isolated local container nodes with Docker environments.</p>
+            <div class="project-tags">
+              <span class="project-tag">TypeScript</span>
+              <span class="project-tag">Node CLI</span>
+              <span class="project-tag">Docker</span>
+              <span class="project-tag">CI/CD</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Sangramborude14/surge-agent.git" target="_blank" class="project-link" style="color: hsl(var(--color-astro-gold));">
+                <i data-lucide="github"></i> View Repo <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 4: DevPulse -->
+          <div class="astro-card project-card">
+            <span class="project-badge">MISSION #04</span>
+            <h3 class="glow-blue-text">DevPulse</h3>
+            <p>Live server health analytics and dashboard reporter. Tracks system metrics, database queries, and route speeds to broadcast diagnostic logs to dev clients via socket.io.</p>
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">Express</span>
+              <span class="project-tag">Socket.io</span>
+              <span class="project-tag">MongoDB</span>
+              <span class="project-tag">Mongoose</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Sangramborude14/DevPulse.git" target="_blank" class="project-link">
+                <i data-lucide="github"></i> View Repo <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 5: CodeCafe -->
+          <div class="astro-card project-card">
+            <span class="project-badge" style="border-color: hsl(var(--color-astro-purple)); color: hsl(var(--color-astro-purple)); text-shadow: 0 0 5px hsla(var(--color-astro-purple) / 0.4);">MISSION #05</span>
+            <h3 class="glow-blue-text" style="color: #c56cf0; text-shadow: 0 0 10px rgba(197, 108, 240, 0.4);">CodeCafe</h3>
+            <p>E-commerce platform providing developer sustenance. Implements GraphQL queries, secure password encryption (bcryptjs), session caches (Redis), and PostgreSQL transactions.</p>
+            <div class="project-tags">
+              <span class="project-tag">Next.js</span>
+              <span class="project-tag">GraphQL</span>
+              <span class="project-tag">PostgreSQL</span>
+              <span class="project-tag">Redis</span>
+              <span class="project-tag">Bcryptjs</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Sangramborude14/CodeCafe.git" target="_blank" class="project-link" style="color: #c56cf0;">
+                <i data-lucide="github"></i> View Repo <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- LEETCODE / POWER-UP TRACKER -->
+    <section id="powerup">
+      <div class="container">
+        <div class="astro-card leetcode-card">
+          <div class="leetcode-visual">
+            <div class="core-chart-container">
+              <svg class="core-chart-svg" width="220" height="220" viewBox="0 0 200 200">
+                <defs>
+                  <linearGradient id="chartGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="hsl(var(--color-astro-blue))" />
+                    <stop offset="100%" stop-color="hsl(var(--color-astro-purple))" />
+                  </linearGradient>
+                </defs>
+                <circle class="core-chart-bg" cx="100" cy="100" r="90" />
+                <circle id="core-progress-circle" class="core-chart-progress" cx="100" cy="100" r="90" />
+              </svg>
+              <div class="core-chart-text">
+                <h4 id="leetcode-total">00</h4>
+                <span>SOLVED</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="leetcode-info">
+            <div class="hero-subtitle">
+              <i data-lucide="award"></i> POWER-UP STATS
+            </div>
+            <h3>DSA Power Core</h3>
+            <p>Monitoring algorithm efficiency and runtime constraints. Solving data structure missions live on LeetCode.</p>
+            
+            <div class="stats-breakdown">
+              <div class="stat-item easy">
+                <div class="count" id="easy-solved">0</div>
+                <div class="label">Easy</div>
+              </div>
+              <div class="stat-item medium">
+                <div class="count" id="medium-solved">0</div>
+                <div class="label">Medium</div>
+              </div>
+              <div class="stat-item hard">
+                <div class="count" id="hard-solved">0</div>
+                <div class="label">Hard</div>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 1.5rem; align-items: center;">
+              <a href="https://leetcode.com/Sangramborude14" target="_blank" class="btn-primary">
+                <i data-lucide="terminal"></i> LeetCode Profile
+              </a>
+              <span id="acceptance-rate" style="font-family: var(--font-header); font-weight: 700; color: hsl(var(--color-astro-grey));">
+                ACCEPTANCE: --%
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRANSMISSION HUB (CONTACT) -->
+    <section id="transmission">
+      <div class="container">
+        <div class="section-header">
+          <h2>Transmission Hub</h2>
+          <p>Establish a telemetry link. Send a direct signal to Astro Bot.</p>
+        </div>
+
+        <div class="astro-card contact-grid">
+          <div class="contact-telemetry">
+            <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">Telemetry Channels</h3>
+            <p style="color: hsl(var(--color-astro-grey)); font-size: 0.95rem; margin-bottom: 2.5rem;">
+              Choose your communication method. The console is monitoring all signals.
+            </p>
+
+            <div class="contact-info-list">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i data-lucide="mail"></i>
+                </div>
+                <div class="contact-details">
+                  <h4>Secure Email</h4>
+                  <a href="mailto:sangramborude14@gmail.com">sangramborude14@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i data-lucide="map-pin"></i>
+                </div>
+                <div class="contact-details">
+                  <h4>Orbital Location</h4>
+                  <p>NIT Hamirpur, Himachal Pradesh, India</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i data-lucide="cpu"></i>
+                </div>
+                <div class="contact-details">
+                  <h4>Discord Server</h4>
+                  <p>sangram_bot#0000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <form id="signal-form" class="contact-form" onsubmit="sendTelemetry(event)">
+            <div class="form-group">
+              <label for="caller-id">CALLER ID (Name)</label>
+              <input type="text" id="caller-id" class="form-control" placeholder="Identify yourself..." required>
+            </div>
+            <div class="form-group">
+              <label for="return-channel">RETURN CHANNEL (Email)</label>
+              <input type="email" id="return-channel" class="form-control" placeholder="Where should we reply..." required>
+            </div>
+            <div class="form-group">
+              <label for="signal-payload">SIGNAL PAYLOAD (Message)</label>
+              <textarea id="signal-payload" class="form-control" placeholder="Type transmission content here..." required></textarea>
+            </div>
+            <button type="submit" class="btn-primary" style="align-self: flex-start;">
+              <i data-lucide="radio"></i> Broadcast Signal
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-socials">
+        <a href="https://github.com/Sangramborude14" target="_blank" class="social-icon">
+          <i data-lucide="github"></i>
+        </a>
+        <a href="https://leetcode.com/Sangramborude14" target="_blank" class="social-icon">
+          <i data-lucide="award"></i>
+        </a>
+        <a href="mailto:sangramborude14@gmail.com" class="social-icon">
+          <i data-lucide="mail"></i>
+        </a>
+      </div>
+      <p class="footer-copy">
+        Designed with 💙 inspired by Astro Bot. Web Portfolio &copy; 2026. Built by <a href="https://github.com/Sangramborude14" target="_blank">Sangramborude14</a>.
+      </p>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+  </script>
+</body>
+</html>
