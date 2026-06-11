@@ -1,4 +1,4 @@
-# 🤖 Sangram Borude 🚀
+#  🐮 Sangram Borude 🐮
 ### *Exploring the Code Galaxy & Rescuing Bugs!* 🎮
 
 <p align="center">
@@ -9,7 +9,7 @@ Welcome, Explorer! I'm a Full-Stack Developer and Systems Programmer crafting sc
 
 ---
 
-## 🎮 Astro's Arsenal (Tech Stack)
+## 🎮 Tech Stack
 
 ### ⚡ Primary Thrusters (Frontend & UI)
 <p align="left">
@@ -24,7 +24,7 @@ Welcome, Explorer! I'm a Full-Stack Developer and Systems Programmer crafting sc
   <img src="https://img.shields.io/badge/GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white" alt="GraphQL" />
 </p>
 
-### 🔋 Power Core (Backend & Databases)
+### Backend & Databases
 <p align="left">
   <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
   <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express.js" />
@@ -36,7 +36,7 @@ Welcome, Explorer! I'm a Full-Stack Developer and Systems Programmer crafting sc
   <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" alt="Redis" />
 </p>
 
-### 🛠️ Hardware & Tools (DevOps & Systems)
+### DevOps & Systems
 <p align="left">
   <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" alt="C++" />
   <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
@@ -50,7 +50,7 @@ Welcome, Explorer! I'm a Full-Stack Developer and Systems Programmer crafting sc
 
 ---
 
-## 🚀 Mission Log: Rescued Bots (Top 5 Projects)
+## 🚀 Mission Log: Rescued Bots 
 
 Here are the top 5 high-priority rescue missions completed in the galaxy:
 
@@ -71,7 +71,7 @@ Here are the top 5 high-priority rescue missions completed in the galaxy:
 
 ---
 
-## 📊 System Diagnostics (Activity Trackers)
+
 
 ### 📈 GitHub Activities
 <p align="center">
@@ -80,15 +80,14 @@ Here are the top 5 high-priority rescue missions completed in the galaxy:
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=Sangramborude14&theme=tokyonight" alt="Sangram's GitHub streak" />
 </p>
 
-### 🧠 DSA Power-Up Level (LeetCode Stats)
+### LeetCode Stats 😔
 <p align="center">
   <a href="https://leetcode.com/Sangramborude14" target="_blank">
-    <img src="https://leetcard.jacoblin.cool/Sangramborude14?theme=dark&font=Outfit" alt="Sangram's LeetCode Stats" />
+    <img src="https://leetcard.jacoblin.cool/sangramisnoob?theme=dark&font=Outfit" alt="Sangram's LeetCode Stats" />
   </a>
 </p>
 
 ---
 
 <p align="center">
-  <i>"Remember: A bot never sleeps, it just optimizes!"</i> 🤖✨
 </p>
