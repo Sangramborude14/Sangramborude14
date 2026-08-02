@@ -1,7 +1,7 @@
 <h1 align="center">Sangram Borude</h1>
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com/?font=Fira+Code&weight=600&size=22&pause=1000&color=BD93F9&center=true&vCenter=true&width=600&lines=Software+Engineer;Full-Stack+%26+Systems+Developer;Web+Security+%26+Backend+Architecture" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com/?font=Fira+Code&weight=600&size=22&pause=1000&color=BD93F9&center=true&vCenter=true&width=600&lines=Software+Engineer;Full-Stack+%26+Systems+Deve[...]" />
 </p>
 
 <p align="center">
@@ -20,7 +20,7 @@
 </p>
 
 <p align="center">
-  Passionate software engineer focused on building high-performance full-stack web applications, robust microservices, secure backend systems, and developer tools. Experienced in web security best practices, modern frontend frameworks, database architecture, and algorithms.
+  Passionate software engineer focused on building high-performance full-stack web applications, robust microservices, secure backend systems, and developer tools. Experienced in web security best[...] 
 </p>
 
 ---
@@ -160,11 +160,12 @@
 
 | Project | Description | Primary Tech Stack | Repository |
 | :--- | :--- | :--- | :--- |
-| **OpticSync** | Real-time developer collaboration dashboard with WebSocket synchronization. | Next.js, Prisma, WebSockets | [Sangramborude14/OpticSync](https://github.com/Sangramborude14/OpticSync.git) |
-| **apna-ai** | Intelligent agent toolchain and prompt optimization engine. | Node.js, LLM Integrations, TypeScript | [Sangramborude14/apna-ai](https://github.com/Sangramborude14/apna-ai.git) |
-| **surge-agent** | High-speed CLI automation tool for developer workflow synchronization. | Node.js, CLI Tools, Automation | [Sangramborude14/surge-agent](https://github.com/Sangramborude14/surge-agent.git) |
-| **DevPulse** | Real-time system analytics dashboard and network connection monitor. | React, Express, Analytics | [Sangramborude14/DevPulse](https://github.com/Sangramborude14/DevPulse.git) |
-| **CodeCafe** | E-commerce application featuring secure authentication and custom session systems. | React, Node.js, Prisma, Sessions | [Sangramborude14/CodeCafe](https://github.com/Sangramborude14/CodeCafe.git) |
+| **kanban** | Collaborative real-time Kanban board with Socket.io and serverless database; demonstrates real-time syncing, drag-and-drop, and robust API design. | Next.js (App Router), React 19, Socket.io, Prisma, PostgreSQL (Neon) | [Sangramborude14/kanban](https://github.com/Sangramborude14/kanban) |
+| **coolnotes** | Premium full-stack note-taking app with authentication, study tracking, and server components; strong examples of auth, DB schema design, and UI/UX. | Next.js (App Router), React 19, TypeScript, Tailwind CSS, MongoDB, Mongoose | [Sangramborude14/coolnotes](https://github.com/Sangramborude14/coolnotes) |
+| **flashshop** | Next.js e-commerce starter that’s easy to deploy and extend; good for showcasing frontend and deployment skills. | Next.js, React, TypeScript | [Sangramborude14/flashshop](https://github.com/Sangramborude14/flashshop) |
+| **algovision** | Fast React + TypeScript + Vite setup with attention to linting and tooling—great as a starter template or learning project. | React, TypeScript, Vite, Oxc/Oxlint | [Sangramborude14/algovision](https://github.com/Sangramborude14/algovision) |
+| **Aegis (dashboard-ui)** | Dashboard UI/frontend components and templates built with modern Next.js tooling; useful for UI/UX demonstrations. | Next.js, TypeScript | [Sangramborude14/Aegis](https://github.com/Sangramborude14/Aegis) |
+| **DevNotes** | Notes app architecture and learning project with diagrams and feature planning—shows system thinking and design. | Next.js, TypeScript | [Sangramborude14/DevNotes](https://github.com/Sangramborude14/DevNotes) |
 
 ---
 
