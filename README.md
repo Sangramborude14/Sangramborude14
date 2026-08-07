@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="https://Sangramborude14.github.io" target="_blank">
+  <a href="https://sangram-portfolio-tau.vercel.app/" target="_blank">
     <img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=firefox&logoColor=white" alt="Portfolio" />
   </a>
   <a href="https://github.com/Sangramborude14?tab=repositories" target="_blank">
